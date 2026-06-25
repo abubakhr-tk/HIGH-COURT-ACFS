@@ -1,4 +1,4 @@
-# Kano Case Filing System
+# Kano High Court Case Filing System
 
 A full-stack automated case filing management system built as a Kano State case study.
 
