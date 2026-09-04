@@ -53,6 +53,7 @@ export const updateCourt = (req: Request, res: Response, next: NextFunction) => 
             entityId: updated.id,
             action: 'updated',
             performedBy: req.user?.id || updated.contact || 'system',
+            details: `Court updated: ${updated.name}`
         });
         res.json(updated);
     } catch (error) {

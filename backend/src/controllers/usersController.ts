@@ -60,6 +60,7 @@ export const updateUser = (req: Request, res: Response, next: NextFunction) => {
             entityId: updated.id,
             action: 'updated',
             performedBy: userRecord?.email || 'system',
+            details: `User updated: ${updated.name}`
         });
         res.json(updated);
     } catch (error) {

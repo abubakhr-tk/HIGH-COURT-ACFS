@@ -12,3 +12,4 @@ export const kanoStateConfig = {
         Regulatory: ['High Court'],
         Others: ['High Court', 'Magistrate Court']
     }
+};

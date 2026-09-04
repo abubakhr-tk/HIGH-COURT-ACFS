@@ -112,7 +112,7 @@ if (!hasPasswordColumn) {
     }
 }
 
-const hasUsers = db.prepare('SELECT COUNT(*) as count FROM users').get().count;
+const hasUsers = (db.prepare('SELECT COUNT(*) as count FROM users').get() as { count: number }).count;
 if (!hasUsers) {
     const adminId = uuidv4();
     const adminPassword = hashPassword('Admin123!');
@@ -130,7 +130,7 @@ if (!hasUsers) {
     });
 }
 
-const hasCourts = db.prepare('SELECT COUNT(*) as count FROM courts').get().count;
+const hasCourts = (db.prepare('SELECT COUNT(*) as count FROM courts').get() as { count: number }).count;
 if (!hasCourts) {
     const courts = [
         { name: 'High Court of Kano State', jurisdiction: 'Statewide', location: 'Kano', contact: '074-123-4567' },

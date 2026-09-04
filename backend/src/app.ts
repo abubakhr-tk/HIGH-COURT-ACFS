@@ -28,6 +28,9 @@ app.use('/api/analytics', analyticsRouter);
 app.use('/api/kano', kanoRouter);
 
 app.get('/api/health', (_req, res) => {
-    app.use(errorHandler);
+    res.json({ status: 'ok' });
+});
 
-    export default app;
+app.use(errorHandler);
+
+export default app;
