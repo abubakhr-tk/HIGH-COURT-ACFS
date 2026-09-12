@@ -1,12 +1,12 @@
 import express from 'express';
 import cors from 'cors';
-import authRoutes from './routes/auth';
-import casesRoutes from './routes/cases';
-import courtsRoutes from './routes/courts';
-import documentsRoutes from './routes/documents';
-import usersRoutes from './routes/users';
-import analyticsRoutes from './routes/analytics';
-import kanoRoutes from './routes/kano';
+import { authRouter as authRoutes } from './routes/auth';
+import { casesRouter as casesRoutes } from './routes/cases';
+import { courtsRouter as courtsRoutes } from './routes/courts';
+import { documentsRouter as documentsRoutes } from './routes/documents';
+import { usersRouter as usersRoutes } from './routes/users';
+import { analyticsRouter as analyticsRoutes } from './routes/analytics';
+import { kanoRouter as kanoRoutes } from './routes/kano';
 import { errorHandler } from './middleware/errorHandler';
 
 const app = express();
